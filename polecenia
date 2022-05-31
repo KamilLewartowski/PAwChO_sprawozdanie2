@@ -1,0 +1,7 @@
+docker build -t local/scratch:alpine .
+docker build -t local/scratch:ubuntu .
+docker images
+
+
+docker run -d -p 8080:80 --name alpine local/scratch:alpine
+docker run -d -p 8000:80 --name ubuntu local/scratch:ubuntu
